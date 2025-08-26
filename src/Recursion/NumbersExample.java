@@ -4,6 +4,37 @@ public class NumbersExample {
 
     public static void main(String[] args) {
 
+        //write a function that takes in a number and prints it
+        //print first 5 numbers: 1 2 3 4 5
+
+        print1(1);
+        print1(2);
+        print1(3);
+        print1(4);
+        print1(5);
+
+        System.out.println("----\n");
+
+        printRecNum(5, 1);
+
     }
+
+    static void print1(int num) {
+        System.out.println(num);
+    }
+
+    static void printRecNum(int howManyNums, int startNum) {
+
+        //base case
+        if(startNum > howManyNums)
+            return;
+
+        System.out.println(startNum);
+
+        //recursive call
+        printRecNum(howManyNums, ++startNum);
+
+    }
+
 
 }
