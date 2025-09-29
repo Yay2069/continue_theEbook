@@ -15,7 +15,7 @@ public class NumbersExample {
 
         System.out.println("----\n");
 
-        printRecNum(5, 1);
+        printNum(0);
 
     }
 
@@ -23,18 +23,19 @@ public class NumbersExample {
         System.out.println(num);
     }
 
-    static void printRecNum(int howManyNums, int startNum) {
-
+    public static int printNum(int num) {
         //base case
-        if(startNum > howManyNums)
-            return;
+        if(num == 5) {
+            System.out.println(num);
+            return num;
+        }
 
-        System.out.println(startNum);
-
-        //recursive call
-        printRecNum(howManyNums, ++startNum);
+        System.out.println(num);
+        return printNum(++num);
 
     }
+
+
 
 
 }
