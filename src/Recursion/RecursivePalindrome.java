@@ -54,6 +54,7 @@ public class RecursivePalindrome {
 
     }
 
+    //recursive helper method
     public static boolean recursiveHelper(String s, int l, int r) {
         if(l >= r) {
             return true;
